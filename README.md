@@ -12,6 +12,43 @@ secure file access.
 - React + TypeScript + TailwindCSS
 - Docker
 
+```angular2html
+com.storageapi/
+├── controller/
+│   ├── BucketController.java
+│   └── ObjectController.java
+├── service/
+│   ├── BucketService.java        ← interface
+│   ├── ObjectService.java        ← interface
+│   ├── StorageService.java       ← interface (NEW)
+│   └── impl/
+│       ├── BucketServiceImpl.java
+│       ├── ObjectServiceImpl.java
+│       └── StorageServiceImpl.java ← handles disk I/O (NEW)
+├── repository/
+│   ├── BucketRepository.java
+│   └── ObjectRepository.java
+├── domain/
+│   ├── entity/
+│   │   ├── Bucket.java
+│   │   └── StorageObject.java
+│   └── dto/
+│       ├── BucketDto.java
+│       ├── CreateBucketRequest.java
+│       ├── UploadObjectRequest.java
+│       └── ObjectResponseDto.java
+├── mapper/
+│   ├── BucketMapper.java
+│   └── ObjectMapper.java
+├── exception/
+│   ├── GlobalExceptionHandler.java
+│   ├── BucketNotFoundException.java
+│   └── ObjectNotFoundException.java
+└── config/
+    └── StorageConfig.java        ← defines upload folder path (NEW)
+```
+
+
 ## Running Locally
 \`\`\`bash
 docker-compose up
