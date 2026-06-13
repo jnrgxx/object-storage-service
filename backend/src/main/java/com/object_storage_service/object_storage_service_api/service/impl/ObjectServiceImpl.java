@@ -10,7 +10,7 @@ import com.object_storage_service.object_storage_service_api.repository.BucketRe
 import com.object_storage_service.object_storage_service_api.repository.ObjectRepository;
 import com.object_storage_service.object_storage_service_api.service.ObjectService;
 import com.object_storage_service.object_storage_service_api.service.StorageService;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

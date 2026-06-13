@@ -9,7 +9,7 @@ import com.object_storage_service.object_storage_service_api.repository.BucketRe
 import com.object_storage_service.object_storage_service_api.repository.ObjectRepository;
 import com.object_storage_service.object_storage_service_api.service.BucketService;
 import com.object_storage_service.object_storage_service_api.service.StorageService;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
